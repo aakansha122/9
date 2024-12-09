@@ -23,6 +23,7 @@ pipeline {
                 script {
                     // Deploy your Docker image
                     echo 'Deploying application...'
+                    bat 'docker run -d -p 3000:3000 --name todoapp-container todoapp'
                 }
             }
         }
